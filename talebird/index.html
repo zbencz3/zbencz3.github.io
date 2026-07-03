@@ -121,26 +121,28 @@ permalink: /talebird/
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(255, 248, 232, 0.98) 0%, rgba(255, 248, 232, 0.88) 33%, rgba(255, 248, 232, 0.26) 64%, rgba(255, 248, 232, 0.78) 100%),
-      linear-gradient(180deg, transparent 0%, rgba(255, 248, 232, 0.34) 68%, var(--cream) 100%);
+      radial-gradient(circle at 82% 18%, rgba(255, 201, 119, 0.28) 0 11rem, transparent 24rem),
+      radial-gradient(circle at 12% 38%, rgba(191, 227, 245, 0.46) 0 14rem, transparent 30rem);
     pointer-events: none;
-    z-index: 2;
+    z-index: 0;
   }
 
-  .hero-art {
-    position: absolute;
-    right: max(-80px, calc((100vw - 1160px) / 2 - 90px));
-    bottom: -160px;
+  .hero-layout {
+    position: relative;
     z-index: 1;
-    width: min(620px, 50vw);
-    border-radius: 42px;
-    box-shadow: 0 34px 90px rgba(72, 84, 96, 0.26);
-    transform: rotate(1deg);
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.78fr);
+    gap: 56px;
+    align-items: center;
+  }
+
+  .hero-visual {
+    justify-self: center;
+    width: min(430px, 100%);
   }
 
   .hero-copy {
     position: relative;
-    z-index: 3;
     width: min(660px, 100%);
     padding-top: 24px;
   }
@@ -431,17 +433,17 @@ permalink: /talebird/
 
     .hero::before {
       background:
-        linear-gradient(180deg, rgba(255, 248, 232, 0.98) 0%, rgba(255, 248, 232, 0.76) 46%, rgba(255, 248, 232, 0.98) 100%);
+        radial-gradient(circle at 78% 12%, rgba(255, 201, 119, 0.24) 0 8rem, transparent 18rem),
+        radial-gradient(circle at 12% 40%, rgba(191, 227, 245, 0.44) 0 12rem, transparent 24rem);
     }
 
-    .hero-art {
-      position: relative;
-      right: auto;
-      bottom: auto;
-      z-index: 3;
-      width: min(430px, 100%);
-      margin: 34px auto 0;
-      transform: none;
+    .hero-layout {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    .hero-visual {
+      margin: 0 auto;
     }
 
     .hero-points,
@@ -513,13 +515,14 @@ permalink: /talebird/
     <nav aria-label="Primary">
       <a href="#illustrated">Illustrated</a>
       <a href="#reader">Reader</a>
+      <a href="#sky-blue">Sky blue</a>
       <a class="nav-keep" href="https://apps.apple.com/us/app/talebird-kids-bedtime-stories/id6770953108">App Store</a>
     </nav>
   </header>
 
   <main>
     <section id="illustrated" class="hero">
-      <div class="wrap">
+      <div class="wrap hero-layout">
         <div class="hero-copy">
           <p class="eyebrow"><span class="spark" aria-hidden="true"></span>Now on the App Store</p>
           <h1>Your child belongs inside the adventure.</h1>
@@ -538,8 +541,10 @@ permalink: /talebird/
             <div class="point"><strong>Read or play</strong>Follow along together, or let gentle narration carry the night.</div>
           </div>
         </div>
+        <figure class="visual tall hero-visual">
+          <img src="assets/illustrated-hero.jpg" alt="A personalized TaleBird illustrated story where a child appears inside the adventure">
+        </figure>
       </div>
-      <img class="hero-art" src="assets/illustrated-hero.jpg" alt="A personalized TaleBird illustrated story where a child appears inside the adventure">
     </section>
 
     <section id="reader" class="sky-band">
@@ -557,6 +562,24 @@ permalink: /talebird/
         <figure class="visual tall">
           <img src="assets/reader.jpg" alt="TaleBird reader screen with text and a hand-painted story scene">
         </figure>
+      </div>
+    </section>
+
+    <section id="sky-blue" class="cream-band">
+      <div class="wrap showcase reverse">
+        <figure class="visual tall">
+          <img src="assets/discoveries-daybreak.jpg" alt="A TaleBird discovery about why the sky is blue playing in the app">
+        </figure>
+        <div class="copy">
+          <div class="section-head">
+            <h2>Why is the sky blue?</h2>
+            <p>
+              For the questions that arrive before bedtime, TaleBird turns wonder into short,
+              cozy discoveries kids can listen to again.
+            </p>
+          </div>
+          <span class="note">Big questions, little tales.</span>
+        </div>
       </div>
     </section>
 
