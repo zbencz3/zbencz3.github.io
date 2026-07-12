@@ -136,9 +136,10 @@ permalink: /talebird/
     align-items: center;
   }
 
-  .hero-visual {
+  /* Three classes so it beats `.visual.tall`'s 430px cap and fills the column. */
+  .hero-visual.visual.tall {
     justify-self: center;
-    width: min(430px, 100%);
+    width: 100%;
   }
 
   .hero-copy {
