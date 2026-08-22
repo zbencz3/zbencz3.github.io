@@ -37,6 +37,20 @@ permalink: /cartolina/
   a { color: var(--butter); }
   .links { margin-top: 40px; font-size: 14px; color: rgba(253,244,224,0.5); }
   .links a { color: rgba(253,244,224,0.75); margin: 0 10px; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             gap: 18px; margin: 34px 0 8px; }
+  .gallery figure { margin: 0; }
+  .gallery img { width: 100%; height: auto; border-radius: 12px; display: block;
+                 box-shadow: 0 16px 36px rgba(0,0,0,0.4); }
+  .gallery figcaption { font-family: ui-serif, Georgia, serif; font-style: italic;
+                        font-size: 14px; color: rgba(253,244,224,0.75); margin-top: 8px; }
+  .credit { font-size: 11px; letter-spacing: 0.18em; color: rgba(253,244,224,0.35);
+            margin-top: 6px; }
+  .store { display: inline-block; margin: 26px auto 0; background: var(--coral);
+           color: var(--cream); text-decoration: none; font-family: ui-serif, Georgia, serif;
+           font-style: italic; font-weight: 700; font-size: 18px;
+           padding: 14px 30px; border-radius: 14px;
+           box-shadow: 0 14px 30px rgba(228,87,61,0.35); }
 </style>
 </head>
 <body>
@@ -47,6 +61,17 @@ permalink: /cartolina/
   <p>Search any beach, city or viewpoint, add one photo, and Cartolina composes a
   gorgeous shareable card — a real map with a pin on the exact spot, your photo
   taped in like a polaroid, and the coordinates to prove it.</p>
+
+  <div class="gallery">
+    <figure><img src="cards/hallstatt-stamp.jpg" alt="Hallstatt as a giant postage stamp card" loading="lazy"><figcaption>Hallstatt · the Stamp</figcaption></figure>
+    <figure><img src="cards/positano-classic.jpg" alt="Positano classic map postcard" loading="lazy"><figcaption>Positano · the Classic</figcaption></figure>
+    <figure><img src="cards/kyoto-passport.jpg" alt="Fushimi Inari passport-page card" loading="lazy"><figcaption>Kyoto · the Passport</figcaption></figure>
+    <figure><img src="cards/paris-airmail.jpg" alt="Eiffel Tower airmail envelope card" loading="lazy"><figcaption>Paris · the Airmail</figcaption></figure>
+    <figure><img src="cards/santorini-instant.jpg" alt="Santorini instant print card" loading="lazy"><figcaption>Santorini · the Instant</figcaption></figure>
+    <figure><img src="cards/brandinchi-ring.jpg" alt="Cala Brandinchi ring template card" loading="lazy"><figcaption>Sardegna · the Ring</figcaption></figure>
+  </div>
+  <p class="credit">EVERY CARD MADE IN THE APP · PHOTOS CC0/PD, WIKIMEDIA COMMONS</p>
+  <a class="store" href="https://apps.apple.com/app/cartolina/id6800707141">Get Cartolina on the App Store</a>
 
   <div class="card">
     <h2>Support</h2>
